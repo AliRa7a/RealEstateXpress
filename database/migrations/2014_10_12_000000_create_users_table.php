@@ -25,6 +25,7 @@ return new class extends Migration
             $table->enum('status', ['active', 'inactive'])->default('user');
             $table->rememberToken();
             $table->timestamps();
+            
         });
     }
 
