@@ -40,8 +40,11 @@ Route::middleware(['auth', 'role:admin'])->group(function () {
     Route::get('/admin/logout', [AdminController::class, 'adminLogout'])->name('admin.logout');
 });
 
+
 // Middleware for the agent role
 Route::middleware(['auth', 'role:agent'])->group(function () {
     // Agent Dashboard Route
     Route::get('/agent/dashboard', [AgentController::class, 'agentDashboard'])->name('agent.dashboard');
 });
+// Admin Login Route
+Route::get('/admin/login', [AdminController::class, 'adminLogin'])->name('admin.login');
