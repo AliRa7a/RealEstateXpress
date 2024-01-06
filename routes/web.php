@@ -36,6 +36,8 @@ require __DIR__ . '/auth.php';
 Route::middleware(['auth', 'role:admin'])->group(function () {
     // Admin Dashboard Route
     Route::get('/admin/dashboard', [AdminController::class, 'adminDashboard'])->name('admin.dashboard');
+    // Admin Lgout Route
+    Route::get('/admin/logout', [AdminController::class, 'adminLogout'])->name('admin.logout');
 });
 
 // Middleware for the agent role
