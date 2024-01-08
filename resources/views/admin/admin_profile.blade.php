@@ -1,6 +1,7 @@
 @extends('admin.admin_dashboard')
 
 @section('admin')
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 
 <div class="page-content">
     <div class="row profile-body">
@@ -81,8 +82,7 @@
                                     <input type="file" class="form-control" name="photo" id="photo" autocomplete="off" value="{{$profileData->photo}}">
                                     <img id="showImage" class="wd-80 rounded-circle" src="{{(!empty($profileData->photo)) ? url('upload/admin_images/'.$profileData->photo) : url('upload/no_image.jpg')}}" alt="profile">
                                 </div>
-                                <button type="submit" class="btn btn-primary me-2">Submit</button>
-                                <button class="btn btn-secondary">Cancel</button>
+                                <button type="submit" class="btn btn-primary me-2">Update Profile</button>
                             </form>
 
                         </div>
@@ -91,6 +91,17 @@
             </div>
         </div>
     </div>
-
 </div>
+
+<script type="text/javascript">
+    $(document).ready(function() {
+        $('#photo').change(function(e) {
+            var reader = new FileReader();
+            reader.onload = function(e) {
+                $('#showImage').attr('src', e.target.result);
+            }
+            reader.readAsDataURL(e.target.files['0']);
+        })
+    })
+</script>
 @endsection
