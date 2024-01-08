@@ -6,6 +6,7 @@ use App\Models\User;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Hash;
 
 class AdminController extends Controller
 {
@@ -64,5 +65,29 @@ class AdminController extends Controller
         $id = Auth::user()->id;
         $profileData = User::find($id);
         return view('admin.admin_chage_password', compact('profileData'));
+    }
+
+    public function adminUpdatePassword(Request $request)
+    {
+        // Validate the form data
+        $request->validate([
+            'old_password' => 'required',
+            'new_password' => 'required|min:6',
+            'confirm_password' => 'required|same:new_password',
+        ]);
+
+        // Check if the old password matches the current password
+        if (!Hash::check($request->old_password, Auth::user()->password)) {
+            return redirect()->back()->with('error', 'Old password is incorrect');
+        }
+
+        // Update the password
+        $user = Auth::user();
+        $user->password = Hash::make($request->new_password);
+
+        /** @var \App\Models\User $user **/
+        $user->save();
+
+        return redirect()->back()->with('success', 'Password updated successfully');
     }
 }
