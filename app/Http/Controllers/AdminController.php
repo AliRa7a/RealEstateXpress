@@ -58,4 +58,11 @@ class AdminController extends Controller
         $data->save();
         return redirect()->back();
     }
+
+    public function adminChangePassword()
+    {
+        $id = Auth::user()->id;
+        $profileData = User::find($id);
+        return view('admin.admin_chage_password', compact('profileData'));
+    }
 }
