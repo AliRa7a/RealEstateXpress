@@ -15,7 +15,6 @@
                         </div>
 
                     </div>
-                    <p>Hi! I'm Amiah the Senior UI Designer at NobleUI. We hope you enjoy the design and quality of Social.</p>
                     <div class="mt-3">
                         <label class="tx-11 fw-bolder mb-0 text-uppercase">Name:</label>
                         <p class="text-muted">{{$profileData->name}}</p>
@@ -54,26 +53,33 @@
                     <div class="card">
                         <div class="card-body">
 
-                            <h6 class="card-title">Basic Form</h6>
+                            <h6 class="card-title">Update Admin Profile</h6>
 
                             <form class="forms-sample">
                                 <div class="mb-3">
-                                    <label for="exampleInputUsername1" class="form-label">Username</label>
-                                    <input type="text" class="form-control" id="exampleInputUsername1" autocomplete="off" placeholder="Username">
+                                    <label for="username" class="form-label">Username</label>
+                                    <input type="text" class="form-control" name="username" id="username" autocomplete="off" value="{{$profileData->username}}">
                                 </div>
                                 <div class="mb-3">
-                                    <label for="exampleInputEmail1" class="form-label">Email address</label>
-                                    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
+                                    <label for="name" class="form-label">Name</label>
+                                    <input type="text" class="form-control" name="name" id="name" autocomplete="off" value="{{$profileData->name}}">
                                 </div>
                                 <div class="mb-3">
-                                    <label for="exampleInputPassword1" class="form-label">Password</label>
-                                    <input type="password" class="form-control" id="exampleInputPassword1" autocomplete="off" placeholder="Password">
+                                    <label for="email" class="form-label">Email address</label>
+                                    <input type="text" class="form-control" name="email" id="email" autocomplete="off" value="{{$profileData->email}}">
                                 </div>
-                                <div class="form-check mb-3">
-                                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                                    <label class="form-check-label" for="exampleCheck1">
-                                        Remember me
-                                    </label>
+                                <div class="mb-3">
+                                    <label for="phone" class="form-label">Phone</label>
+                                    <input type="text" class="form-control" name="phone" id="phone" autocomplete="off" value="{{$profileData->phone}}">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="address" class="form-label">Address</label>
+                                    <input type="text" class="form-control" name="address" id="address" autocomplete="off" value="{{$profileData->address}}">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="photo" class="form-label">Photo</label>
+                                    <input type="file" class="form-control" name="photo" id="photo" autocomplete="off" value="{{$profileData->photo}}">
+                                    <img id="showImage" class="wd-80 rounded-circle" src="{{(!empty($profileData->photo)) ? url('upload/admin_images/'.$profileData->photo) : url('upload/no_image.jpg')}}" alt="profile">
                                 </div>
                                 <button type="submit" class="btn btn-primary me-2">Submit</button>
                                 <button class="btn btn-secondary">Cancel</button>
@@ -84,7 +90,6 @@
                 </div>
             </div>
         </div>
-        <!-- middle wrapper end -->
     </div>
 
 </div>
