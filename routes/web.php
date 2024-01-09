@@ -3,6 +3,7 @@
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\AgentController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -19,6 +20,9 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+//User Frontend All Route
+Route::get('/', [UserController::class, 'index']);
 
 Route::get('/dashboard', function () {
     return view('dashboard');
@@ -47,7 +51,6 @@ Route::middleware(['auth', 'role:admin'])->group(function () {
     //Update Admin Passwords Route
     Route::post('/admin/update/password', [AdminController::class, 'adminUpdatePassword'])->name('admin.update.password');
 });
-
 
 // Middleware for the agent role
 Route::middleware(['auth', 'role:agent'])->group(function () {
