@@ -39,7 +39,7 @@
                         <div class="post-inner">
                             <div class="post">
                                 <figure class="post-thumb"><a href="blog-details.html">
-                                        <img src="assets/images/news/post-1.jpg" alt=""></a></figure>
+                                        <img src="{{(!empty($userData->photo)) ? url('upload/admin_images/'.$userData->photo) : url('upload/no_image.jpg')}}" alt=""></a></figure>
                                 <h5><a href="blog-details.html">{{$userData->name}} </a></h5>
                                 <p>{{$userData->email}} </p>
                             </div>
