@@ -114,3 +114,17 @@
 </section>
 <!-- subscribe-section end -->
 @endsection
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+<script>
+    $(document).ready(function() {
+        $('.tab-btn').click(function() {
+            var tab_id = $(this).attr('data-tab');
+
+            $('.tab-btn').removeClass('active-btn');
+            $('.tab').removeClass('active-tab');
+
+            $(this).addClass('active-btn');
+            $(tab_id).addClass('active-tab');
+        });
+    });
+</script>
