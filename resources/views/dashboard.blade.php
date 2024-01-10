@@ -1,7 +1,8 @@
 @extends('frontend.dashboard')
 @section('main')
 <!--Page Title-->
-<section class="page-title centred" style="background-image: url(assets/images/background/page-title-5.jpg);">
+<section class="page-title centred" style="background-image: url(" {{asset('frontend/assets/images/background/page-title-5.jpg') }}");">
+
     <div class="auto-container">
         <div class="content-box clearfix">
             <h1>User Profile </h1>
@@ -19,7 +20,6 @@
 <section class="sidebar-page-container blog-details sec-pad-2">
     <div class="auto-container">
         <div class="row clearfix">
-
 
 
 
