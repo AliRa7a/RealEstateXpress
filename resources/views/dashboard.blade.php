@@ -23,7 +23,9 @@
 
 
 
-
+            @php $id = Auth::user()->id;
+            $userData = App\Models\User::find($id);
+            @endphp
 
 
 
@@ -38,8 +40,8 @@
                             <div class="post">
                                 <figure class="post-thumb"><a href="blog-details.html">
                                         <img src="assets/images/news/post-1.jpg" alt=""></a></figure>
-                                <h5><a href="blog-details.html">Kazi Ariyan </a></h5>
-                                <p>user@gmail.com </p>
+                                <h5><a href="blog-details.html">{{$userData->name}} </a></h5>
+                                <p>{{$userData->email}} </p>
                             </div>
                         </div>
                     </div>
