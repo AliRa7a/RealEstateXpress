@@ -28,7 +28,7 @@
         <div class="outer-box">
             <div class="main-box">
                 <div class="logo-box">
-                    <figure class="logo"><a href="index.html"><img src="assets/images/logo.png" alt=""></a></figure>
+                    <figure class="logo"><a href="index.html"><img src="{{asset('frontend/assets/images/logo.png')}}" alt=""></a></figure>
                 </div>
                 <div class="menu-area clearfix">
                     <!--Mobile Navigation Toggler-->
@@ -162,7 +162,7 @@
         <div class="outer-box">
             <div class="main-box">
                 <div class="logo-box">
-                    <figure class="logo"><a href="index.html"><img src="assets/images/logo.png" alt=""></a></figure>
+                    <figure class="logo"><a href="index.html"><img src="{{asset('frontend/assets/images/logo.png')}}" alt=""></a></figure>
                 </div>
                 <div class="menu-area clearfix">
                     <nav class="main-menu clearfix">
