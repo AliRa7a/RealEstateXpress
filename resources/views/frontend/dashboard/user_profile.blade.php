@@ -57,7 +57,7 @@
                                     <div class="mb-3">
                                         <label for="photo" class="form-label">Photo</label>
                                         <input type="file" class="form-control" name="photo" id="photo" autocomplete="off" value="{{$userData->photo}}">
-                                        <img id="showImage" class="wd-80 rounded-circle" src="{{(!empty($userData->photo)) ? url('upload/user_images/'.$userData->photo) : url('upload/no_image.jpg')}}" alt="profile">
+                                        <img id="showImage" class="wd-80 rounded-circle" src="{{(!empty($userData->photo)) ? url('upload/user_images/'.$userData->photo) : url('upload/no_image.jpg')}}" alt="profile" style="width: 100px; height:100px;">
                                     </div>
                                     <button type="submit" class="btn btn-primary me-2">Update Profile</button>
                                 </form>
