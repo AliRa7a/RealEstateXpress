@@ -46,7 +46,6 @@
                                         </div>
                                     </div>
 
-
                                     <div class="col-md-4">
                                         <div class="card-body" style="background-color: #002758;">
                                             <h1 class="card-title" style="color: white; font-weight: bold;">0</h1>
@@ -60,11 +59,7 @@
                             </div>
                         </div>
                     </div>
-
-
                 </div>
-
-
                 <div class="blog-details-content">
                     <div class="news-block-one">
                         <div class="inner-box">
@@ -72,27 +67,11 @@
                             <div class="lower-content">
                                 <h3>Activity Logs</h3>
                                 <hr>
-
-
-
-
-
-
                             </div>
                         </div>
                     </div>
-
-
                 </div>
-
-
-
-
-
-
             </div>
-
-
         </div>
     </div>
 </section>
