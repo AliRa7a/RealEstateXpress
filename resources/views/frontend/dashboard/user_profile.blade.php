@@ -1,5 +1,7 @@
 @extends('frontend.dashboard')
 @section('main')
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
 <!--Page Title-->
 <section class="page-title centred" style="background-image: url(assets/images/background/page-title-5.jpg);">
     <div class="auto-container">
@@ -55,7 +57,7 @@
                                     <div class="mb-3">
                                         <label for="photo" class="form-label">Photo</label>
                                         <input type="file" class="form-control" name="photo" id="photo" autocomplete="off" value="{{$userData->photo}}">
-                                        <img id="showImage" class="wd-80 rounded-circle" src="{{(!empty($profileData->photo)) ? url('upload/admin_images/'.$userData->photo) : url('upload/no_image.jpg')}}" alt="profile">
+                                        <img id="showImage" class="wd-80 rounded-circle" src="{{(!empty($userData->photo)) ? url('upload/user_images/'.$userData->photo) : url('upload/no_image.jpg')}}" alt="profile">
                                     </div>
                                     <button type="submit" class="btn btn-primary me-2">Update Profile</button>
                                 </form>
