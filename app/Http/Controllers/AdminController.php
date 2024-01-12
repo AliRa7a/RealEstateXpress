@@ -64,7 +64,7 @@ class AdminController extends Controller
     {
         $id = Auth::user()->id;
         $profileData = User::find($id);
-        return view('admin.admin_chage_password', compact('profileData'));
+        return view('admin.admin_change_password', compact('profileData'));
     }
 
     public function adminUpdatePassword(Request $request)
