@@ -53,4 +53,11 @@ class UserController extends Controller
 
         return redirect('/login');
     }
+
+    public function userChangePassword()
+    {
+        $id = Auth::user()->id;
+        $userData = User::find($id);
+        return view('frontend.dashboard.change_password', compact('userData'));
+    }
 }
