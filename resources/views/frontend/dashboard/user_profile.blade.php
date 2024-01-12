@@ -21,44 +21,43 @@
         <div class="row clearfix">
             <!-- Sidebar with User Data  -->
             @include('frontend.dashboard.dashboard_userdata')
+            @php $id = Auth::user()->id;
+            $userData = App\Models\User::find($id);
+            @endphp
             <div class="col-lg-8 col-md-12 col-sm-12 content-side">
                 <div class="blog-details-content">
                     <div class="news-block-one">
                         <div class="inner-box">
 
                             <div class="lower-content">
-                                <h3>Including Animation In Your Design System.</h3>
-                                <ul class="post-info clearfix">
-                                    <li class="author-box">
-                                        <figure class="author-thumb"><img src="assets/images/news/author-1.jpg" alt=""></figure>
-                                        <h5><a href="blog-details.html">Eva Green</a></h5>
-                                    </li>
-                                    <li>April 10, 2020</li>
-                                </ul>
-
-
-                                <form action="signin.html" method="post" class="default-form">
-                                    <div class="form-group">
-                                        <label>Agent name</label>
-                                        <input type="text" name="name" required="">
+                                <form method="POST" action="" enctype="multipart/form-data" class="forms-sample">
+                                    @csrf
+                                    <div class="mb-3">
+                                        <label for="username" class="form-label">Username</label>
+                                        <input type="text" class="form-control" name="username" id="username" autocomplete="off" value="{{$userData->username}}">
                                     </div>
-                                    <div class="form-group">
-                                        <label>Email address</label>
-                                        <input type="email" name="email" required="">
+                                    <div class="mb-3">
+                                        <label for="name" class="form-label">Name</label>
+                                        <input type="text" class="form-control" name="name" id="name" autocomplete="off" value="{{$userData->name}}">
                                     </div>
-                                    <div class="form-group">
-                                        <label>Password</label>
-                                        <input type="password" name="name" required="">
+                                    <div class="mb-3">
+                                        <label for="email" class="form-label">Email address</label>
+                                        <input type="text" class="form-control" name="email" id="email" autocomplete="off" value="{{$userData->email}}">
                                     </div>
-                                    <div class="form-group">
-                                        <label for="formFile" class="form-label">Default file input example</label>
-                                        <input class="form-control" type="file" id="formFile">
+                                    <div class="mb-3">
+                                        <label for="phone" class="form-label">Phone</label>
+                                        <input type="text" class="form-control" name="phone" id="phone" autocomplete="off" value="{{$userData->phone}}">
                                     </div>
-
-
-                                    <div class="form-group message-btn">
-                                        <button type="submit" class="theme-btn btn-one">Save Changes </button>
+                                    <div class="mb-3">
+                                        <label for="address" class="form-label">Address</label>
+                                        <input type="text" class="form-control" name="address" id="address" autocomplete="off" value="{{$userData->address}}">
                                     </div>
+                                    <div class="mb-3">
+                                        <label for="photo" class="form-label">Photo</label>
+                                        <input type="file" class="form-control" name="photo" id="photo" autocomplete="off" value="{{$userData->photo}}">
+                                        <img id="showImage" class="wd-80 rounded-circle" src="{{(!empty($profileData->photo)) ? url('upload/admin_images/'.$userData->photo) : url('upload/no_image.jpg')}}" alt="profile">
+                                    </div>
+                                    <button type="submit" class="btn btn-primary me-2">Update Profile</button>
                                 </form>
                             </div>
                         </div>
@@ -95,5 +94,15 @@
     </div>
 </section>
 <!-- subscribe-section end -->
-
+<script type="text/javascript">
+    $(document).ready(function() {
+        $('#photo').change(function(e) {
+            var reader = new FileReader();
+            reader.onload = function(e) {
+                $('#showImage').attr('src', e.target.result);
+            }
+            reader.readAsDataURL(e.target.files['0']);
+        })
+    })
+</script>
 @endsection
