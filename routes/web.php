@@ -31,8 +31,7 @@ Route::get('/dashboard', function () {
 Route::middleware('auth')->group(function () {
     Route::get('/user/profile', [UserController::class, 'userProfile'])->name('user.profile');
     Route::post('/user/profile/store', [UserController::class, 'userProfileStore'])->name('user.profile.store');
-
-
+    Route::get('/user/logout', [UserController::class, 'userLogout'])->name('user.logout');
 });
 
 require __DIR__ . '/auth.php';
