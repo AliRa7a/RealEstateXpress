@@ -46,12 +46,8 @@
                         </div>
                     </div>
 
-                    <div class="sidebar-widget category-widget">
-                        <div class="widget-title">
-                            <h4>Category</h4>
-                        </div>
-                        @include('frontend.dashboard.dashboard_sidebar')
-                    </div>
+                    <!-- Sidebar -->
+                    @include('frontend.dashboard.dashboard_sidebar')
 
                 </div>
             </div>
