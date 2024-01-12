@@ -19,40 +19,8 @@
 <section class="sidebar-page-container blog-details sec-pad-2">
     <div class="auto-container">
         <div class="row clearfix">
-
-
-
-
-
-
-
-
-
-            <div class="col-lg-4 col-md-12 col-sm-12 sidebar-side">
-                <div class="blog-sidebar">
-                    <div class="sidebar-widget post-widget">
-                        <div class="widget-title">
-                            <h4>User Profile </h4>
-                        </div>
-                        <div class="post-inner">
-                            <div class="post">
-                                <figure class="post-thumb"><a href="blog-details.html">
-                                        <img src="assets/images/news/post-1.jpg" alt=""></a></figure>
-                                <h5><a href="blog-details.html">Kazi Ariyan </a></h5>
-                                <p>user@gmail.com </p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Sidebar -->
-                    @include('frontend.dashboard.dashboard_sidebar')
-
-                </div>
-            </div>
-
-
-
-
+            <!-- Sidebar with User Data  -->
+            @include('frontend.dashboard.dashboard_userdata')
             <div class="col-lg-8 col-md-12 col-sm-12 content-side">
                 <div class="blog-details-content">
                     <div class="news-block-one">
@@ -92,20 +60,11 @@
                                         <button type="submit" class="theme-btn btn-one">Save Changes </button>
                                     </div>
                                 </form>
-
-
-
                             </div>
                         </div>
                     </div>
-
-
                 </div>
-
-
             </div>
-
-
         </div>
     </div>
 </section>
