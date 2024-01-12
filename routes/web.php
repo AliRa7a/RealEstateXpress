@@ -22,7 +22,7 @@ Route::get('/', function () {
 });
 
 //User Frontend All Route
-Route::get('/', [UserController::class, 'index']);
+Route::get('/', [UserController::class, 'index'])->name('home');
 
 Route::get('/dashboard', function () {
     return view('dashboard');
