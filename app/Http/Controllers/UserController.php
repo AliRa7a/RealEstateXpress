@@ -6,6 +6,7 @@ use App\Models\User;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Hash;
 
 class UserController extends Controller
 {
@@ -59,5 +60,26 @@ class UserController extends Controller
         $id = Auth::user()->id;
         $userData = User::find($id);
         return view('frontend.dashboard.change_password', compact('userData'));
+    }
+    public function userUpdatePassword(Request $request)
+    {
+        $request->validate([
+            'current_password' => 'required',
+            'new_password' => 'required',
+        ]);
+        if (!Hash::check($request->current_password, auth::user()->password)) {
+            toastr()->error('Incorrect old password');
+            return redirect()->back();
+        }
+        if (User::whereId(auth()->user()->id)->update([
+            'password' => Hash::make($request->new_password)
+        ])) {
+            return redirect()->back();
+            toastr()->success('Password updated successfully');
+        }
+        if ($request->new_password !== $request->confirm_password) {
+            toastr()->error('Incorrect old password');
+            return redirect()->back();
+        }
     }
 }
