@@ -19,7 +19,7 @@
                 </ul>
                 @auth
                 <div class="sign-box">
-                    <a href="{{route(''dashboard)}}"><i class="fas fa-user"></i>Dashboard</a>
+                    <a href="{{route('dashboard')}}"><i class="fas fa-user"></i>Dashboard</a>
                     <a href="{{route('user.logout')}}"><i class="fas fa-user"></i>Logout</a>
 
                 </div>
