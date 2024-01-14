@@ -76,5 +76,7 @@ Route::middleware(['auth', 'role:agent'])->group(function () {
 // Admin Login Route
 Route::get('/admin/login', [AdminController::class, 'adminLogin'])->name('admin.login');
 
-
-
+// All Type Property Route
+Route::controller(propertyTypeController::class)->group(function () {
+    Route::get('/all/type', 'AllType')->name('all.type');
+});
