@@ -2,8 +2,10 @@
 
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\AgentController;
+use App\Http\Controllers\Backend\propertyTypeController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\UserController;
+use App\Models\PropertyType;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -29,12 +31,23 @@ Route::get('/dashboard', function () {
 })->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::middleware('auth')->group(function () {
+
+    // Route to display the user's profile
     Route::get('/user/profile', [UserController::class, 'userProfile'])->name('user.profile');
+
+    // Route to store/update the user's profile information
     Route::post('/user/profile/store', [UserController::class, 'userProfileStore'])->name('user.profile.store');
+
+    // Route to handle user logout
     Route::get('/user/logout', [UserController::class, 'userLogout'])->name('user.logout');
+
+    // Route to display the form for changing user's password
     Route::get('/user/change/password', [UserController::class, 'userChangePassword'])->name('user.change.password');
+
+    // Route to update the user's password
     Route::post('/user/update/password', [UserController::class, 'userUpdatePassword'])->name('user.update.password');
 });
+
 
 
 require __DIR__ . '/auth.php';
@@ -62,3 +75,6 @@ Route::middleware(['auth', 'role:agent'])->group(function () {
 });
 // Admin Login Route
 Route::get('/admin/login', [AdminController::class, 'adminLogin'])->name('admin.login');
+
+
+
