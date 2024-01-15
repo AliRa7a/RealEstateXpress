@@ -14,4 +14,8 @@ class propertyTypeController extends Controller
         $propertyTypes = PropertyType::latest()->get();
         return view('admin.property_type.all_type', compact('propertyTypes'));
     }
+    public function AddType(Request $request)
+    {
+        return view('admin.property_type.add_type');
+    }
 }
