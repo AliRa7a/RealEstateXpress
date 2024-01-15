@@ -78,7 +78,7 @@ Route::get('/admin/login', [AdminController::class, 'adminLogin'])->name('admin.
 
 // All Type Property Route
 Route::controller(propertyTypeController::class)->group(function () {
-    Route::get('/all/type', 'AllType')->name('all.type');
-    Route::get('/add/type', 'AddType')->name('add.type');
-
+    Route::get('/all/type', 'allType')->name('all.type');
+    Route::get('/add/type', 'addType')->name('add.type');
+    Route::post('/store/type', 'storeType')->name('store.type');
 });
