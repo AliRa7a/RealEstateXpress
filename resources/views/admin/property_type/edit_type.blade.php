@@ -17,11 +17,11 @@
                                 @csrf
                                 <div class="mb-3">
                                     <label for="type_name" class="form-label">Type Name</label>
-                                    <input type="text" class="form-control" name="type_name" id="type_name" required>
+                                    <input type="text" class="form-control" name="type_name" id="type_name" value="{{$propertyType->type_name}}" required>
                                 </div>
                                 <div class="mb-3">
                                     <label for="type_icon" class="form-label">Type Icon</label>
-                                    <input type="text" class="form-control" name="type_icon" id="type_icon" required>
+                                    <input type="text" class="form-control" name="type_icon" id="type_icon" value="{{$propertyType->type_icon}}" required>
                                 </div>
                                 <button type="submit" class="btn btn-primary me-2">Add</button>
                             </form>
