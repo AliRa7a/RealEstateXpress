@@ -13,7 +13,7 @@
 
                             <h6 class="card-title">Edit Property Type</h6>
 
-                            <form method="POST" action="{{route('store.type')}}" class="forms-sample">
+                            <form method="POST" action="{{route('update.type')}}" class="forms-sample">
                                 @csrf
                                 <input type="hidden" name="id" value="{{$propertyType->id}}">
                                 <div class="mb-3">
