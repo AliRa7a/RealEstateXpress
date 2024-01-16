@@ -14,10 +14,12 @@ class propertyTypeController extends Controller
         $propertyTypes = PropertyType::latest()->get();
         return view('admin.property_type.all_type', compact('propertyTypes'));
     }
+
     public function addType()
     {
         return view('admin.property_type.add_type');
     }
+
     public function storeType(Request $request)
     {
         $request->validate([
@@ -31,9 +33,21 @@ class propertyTypeController extends Controller
         toastr()->success('New Property Type is added successfully');
         return redirect()->route('all.type');
     }
+
     public function editType($id)
     {
-        $propertyType = PropertyType::findOrFail($id);
-        return view('admin.property_type.edit_type', compact('propertyType'));
+        $propertyTypes = PropertyType::findOrFail($id);
+        return view('admin.property_type.edit_type', compact('propertyTypes'));
+    }
+
+    public function updateType(Request $request)
+    {
+        $pid = $request->id;
+        PropertyType::findOrFail($pid)->update([
+            'type_name' => $request->type_name,
+            'type_icon' => $request->type_icon,
+        ]);
+        toastr()->success('Property Type is updated successfully');
+        return redirect()->route('all.type');
     }
 }
