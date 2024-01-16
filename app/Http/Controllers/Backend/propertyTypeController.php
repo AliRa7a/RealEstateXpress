@@ -31,4 +31,9 @@ class propertyTypeController extends Controller
         toastr()->success('New Property Type is added successfully');
         return redirect()->route('all.type');
     }
+    public function editType($id)
+    {
+        $propertyType = PropertyType::findOrFail($id);
+        return view('admin.property_type.edit_type', compact('propertyType'));
+    }
 }
