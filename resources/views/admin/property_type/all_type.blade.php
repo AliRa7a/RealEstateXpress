@@ -28,7 +28,7 @@
                                     <td>{{$propertyType->type_name}}</td>
                                     <td>{{$propertyType->type_icon}}</td>
                                     <td>
-                                        <a href="{{route('edit.type')}}" class="btn btn-outline-primary">Edit</a>
+                                        <a href="{{route('edit.type',$item)}}" class="btn btn-outline-primary">Edit</a>
                                         <a href="#" class="btn btn-outline-danger">Delete</a>
                                     </td>
                                 </tr>
