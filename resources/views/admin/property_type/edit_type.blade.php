@@ -15,6 +15,7 @@
 
                             <form method="POST" action="{{route('store.type')}}" class="forms-sample">
                                 @csrf
+                                <input type="hidden" name="id" value="{{$propertyType->id}}">
                                 <div class="mb-3">
                                     <label for="type_name" class="form-label">Type Name</label>
                                     <input type="text" class="form-control" name="type_name" id="type_name" value="{{$propertyType->type_name}}" required>
