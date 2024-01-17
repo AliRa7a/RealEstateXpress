@@ -85,6 +85,8 @@
     <!-- Custom js for this page -->
     <script src="{{asset('backend/assets/js/data-table.js')}}"></script>
     <!-- End custom js for this page -->
+    <!-- sweetalert2  -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.10.3/dist/sweetalert2.all.min.js"></script>
 </body>
 
 </html>
