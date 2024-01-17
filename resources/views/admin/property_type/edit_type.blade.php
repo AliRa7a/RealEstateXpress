@@ -15,7 +15,6 @@
 
                             <form method="POST" action="{{route('update.type')}}" class="forms-sample">
                                 @csrf
-                                @method('PUT')
 
                                 <input type="hidden" name="id" value="{{$propertyTypes->id}}">
                                 <div class="mb-3">
