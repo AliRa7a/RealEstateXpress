@@ -82,6 +82,6 @@ Route::controller(propertyTypeController::class)->group(function () {
     Route::get('/add/type', 'addType')->name('add.type');
     Route::post('/store/type', 'storeType')->name('store.type');
     Route::get('/edit/{id}/type', 'editType')->name('edit.type');
-
     Route::post('/update/type', 'updateType')->name('update.type');
+    Route::get('/delete/{id}/type', 'deleteType')->name('delete.type');
 });
