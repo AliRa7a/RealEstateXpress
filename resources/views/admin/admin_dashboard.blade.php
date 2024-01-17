@@ -91,6 +91,29 @@
     <!-- End custom js for this page -->
     <!-- sweetalert2 JS  -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.10.1/dist/sweetalert2.all.min.js"></script>
+    <!-- Script to delete Property Type -->
+    <script>
+        function showDeleteConfirmation(propertyId) {
+            Swal.fire({
+                title: "Are you sure?",
+                text: "You won't be able to revert this!",
+                icon: "warning",
+                showCancelButton: true,
+                confirmButtonColor: "#3085d6",
+                cancelButtonColor: "#d33",
+                confirmButtonText: "Yes, delete it!"
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    document.getElementById('delete-form' + propertyId).submit();
+                    Swal.fire({
+                        title: "Deleted!",
+                        text: "Your property type has been deleted.",
+                        icon: "success"
+                    });
+                }
+            });
+        }
+    </script>
 </body>
 
 </html>
