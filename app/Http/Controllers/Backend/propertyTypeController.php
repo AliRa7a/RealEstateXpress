@@ -50,4 +50,10 @@ class propertyTypeController extends Controller
         toastr()->success('Property Type is updated successfully');
         return redirect()->route('all.type');
     }
+    public function deleteType($id)
+    {
+        PropertyType::findOrFail($id)->delete();
+        toastr()->success('Property Type deleted successfully', 'Congrats');
+        return redirect()->back();
+    }
 }
