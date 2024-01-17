@@ -39,6 +39,10 @@
     <!-- End layout styles -->
 
     <link rel="shortcut icon" href="{{asset('backend/assets/images/favicon.png')}}" />
+
+    <!-- sweetalert2 CSS  -->
+    <link href="https://cdn.jsdelivr.net/npm/sweetalert2@11.10.1/dist/sweetalert2.min.css" rel="stylesheet">
+
 </head>
 
 <body>
@@ -85,8 +89,8 @@
     <!-- Custom js for this page -->
     <script src="{{asset('backend/assets/js/data-table.js')}}"></script>
     <!-- End custom js for this page -->
-    <!-- sweetalert2  -->
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.10.3/dist/sweetalert2.all.min.js"></script>
+    <!-- sweetalert2 JS  -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.10.1/dist/sweetalert2.all.min.js"></script>
 </body>
 
 </html>
