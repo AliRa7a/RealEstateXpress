@@ -29,7 +29,11 @@
                                     <td>{{$propertyType->type_icon}}</td>
                                     <td>
                                         <a href="{{ route('edit.type', $propertyType->id) }}" class="btn btn-outline-primary">Edit</a>
-                                        <a href="#" class="btn btn-outline-danger">Delete</a>
+                                        <button class="btn btn-outline-danger" onclick="showDeleteConfirmation('{{$propertyType->id}}')">Delete</button>
+                                        <form action="{{ route('delete.type', $propertyType->id) }}" method="POST" id="delete-form{{$propertyType->id}}">
+                                            @csrf
+                                            @method('DELETE')
+                                        </form>
                                     </td>
                                 </tr>
                                 @endforeach
