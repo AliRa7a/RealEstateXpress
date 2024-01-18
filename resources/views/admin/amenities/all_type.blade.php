@@ -24,8 +24,7 @@
                                 @foreach($amenityTypes as $key => $amenityType)
                                 <tr>
                                     <td> {{$key+1}}</td>
-                                    <td>{{$amenityTypes->type_name}}</td>
-                                    <td>{{$amenityTypes->type_icon}}</td>
+                                    <td>{{$amenityType->amenities_name}}</td>
                                     <td>
                                         <a href="" class="btn btn-outline-primary">Edit</a>
                                         <button class="btn btn-outline-danger">Delete</button>
