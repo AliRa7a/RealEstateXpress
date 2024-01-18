@@ -27,7 +27,11 @@
                                     <td>{{$amenityType->amenities_name}}</td>
                                     <td>
                                         <a href="{{ route('edit.amenities', $amenityType->id) }}" class="btn btn-outline-primary">Edit</a>
-                                        <button class="btn btn-outline-danger">Delete</button>
+                                        <button class="btn btn-outline-danger" onclick="showDeleteConfirmation('{{$amenityType->id}}')">Delete</button>
+                                        <form action="{{ route('delete.amenities', $amenityType->id) }}" method="POST" id="delete-form{{$amenityType->id}}">
+                                            @csrf
+                                            @method('DELETE')
+                                        </form>
                                     </td>
                                 </tr>
                                 @endforeach
