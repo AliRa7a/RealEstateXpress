@@ -94,5 +94,5 @@ Route::controller(AmenitieController::class)->group(function () {
     Route::post('/store/amenities', 'storeAmenities')->name('store.amenities');
     Route::get('/edit/{id}/amenities', 'editAmenities')->name('edit.amenities');
     Route::post('/update/amenities', 'updateAmenities')->name('update.amenities');
-
+    Route::delete('/delete/{id}/amenities', 'deleteAmenities')->name('delete.amenities');
 });
