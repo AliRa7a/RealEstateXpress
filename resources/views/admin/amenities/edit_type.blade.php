@@ -19,7 +19,7 @@
                                     <label for="amenities_name" class="form-label">Amenity Name</label>
                                     <input type="text" class="form-control" name="amenities_name" id="amenities_name" value="{{$amenityTypes->amenities_name}}" required>
                                 </div>
-                                <button type="submit" class="btn btn-primary me-2">Add</button>
+                                <button type="submit" class="btn btn-primary me-2">Update</button>
                             </form>
                         </div>
                     </div>
