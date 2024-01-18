@@ -13,7 +13,7 @@
 
                             <h6 class="card-title">Add Amenity</h6>
 
-                            <form method="POST" action="" class="forms-sample">
+                            <form method="POST" action="{{route('store.amenities')}}" class="forms-sample">
                                 @csrf
                                 <div class="mb-3">
                                     <label for="amenities_name" class="form-label">Amenity Name</label>
