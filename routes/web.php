@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\AgentController;
+use App\Http\Controllers\AmenitieController;
 use App\Http\Controllers\Backend\propertyTypeController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\UserController;
@@ -76,7 +77,7 @@ Route::middleware(['auth', 'role:agent'])->group(function () {
 // Admin Login Route
 Route::get('/admin/login', [AdminController::class, 'adminLogin'])->name('admin.login');
 
-// All Type Property Route
+// Property Type Route
 Route::controller(propertyTypeController::class)->group(function () {
     Route::get('/all/type', 'allType')->name('all.type');
     Route::get('/add/type', 'addType')->name('add.type');
@@ -84,4 +85,9 @@ Route::controller(propertyTypeController::class)->group(function () {
     Route::get('/edit/{id}/type', 'editType')->name('edit.type');
     Route::post('/update/type', 'updateType')->name('update.type');
     Route::delete('/delete/{id}/type', 'deleteType')->name('delete.type');
+});
+
+// Property Type Route
+Route::controller(AmenitieController::class)->group(function () {
+    Route::get('/all/amenities', 'allAmenities')->name('all.amenities');
 });
