@@ -28,7 +28,6 @@
                                     <td>
                                         <a href="{{ route('edit.amenities', $amenityType->id) }}" class="btn btn-outline-primary">Edit</a>
                                         <button class="btn btn-outline-danger">Delete</button>
-
                                     </td>
                                 </tr>
                                 @endforeach
