@@ -45,7 +45,7 @@
                 <div class="collapse" id="amenitie">
                     <ul class="nav sub-menu">
                         <li class="nav-item">
-                            <a href="{{route('all.type')}}" class="nav-link">All Amenitie</a>
+                            <a href="{{route('all.amenities')}}" class="nav-link">All Amenitie</a>
                         </li>
                         <li class="nav-item">
                             <a href="pages/email/read.html" class="nav-link">Add Amenitie</a>
