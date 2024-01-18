@@ -48,7 +48,7 @@
                             <a href="{{route('all.amenities')}}" class="nav-link">All Amenitie</a>
                         </li>
                         <li class="nav-item">
-                            <a href="pages/email/read.html" class="nav-link">Add Amenitie</a>
+                            <a href="{{route('add.amenities')}}" class="nav-link">Add Amenitie</a>
                         </li>
                     </ul>
                 </div>
