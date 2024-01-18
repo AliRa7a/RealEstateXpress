@@ -90,4 +90,5 @@ Route::controller(propertyTypeController::class)->group(function () {
 // Property Type Route
 Route::controller(AmenitieController::class)->group(function () {
     Route::get('/all/amenities', 'allAmenities')->name('all.amenities');
+    Route::get('/add/amenities', 'addAmenities')->name('add.amenities');
 });
