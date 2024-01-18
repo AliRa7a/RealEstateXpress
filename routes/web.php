@@ -91,4 +91,5 @@ Route::controller(propertyTypeController::class)->group(function () {
 Route::controller(AmenitieController::class)->group(function () {
     Route::get('/all/amenities', 'allAmenities')->name('all.amenities');
     Route::get('/add/amenities', 'addAmenities')->name('add.amenities');
+    Route::post('/store/amenities', 'storeAmenities')->name('store.amenities');
 });
