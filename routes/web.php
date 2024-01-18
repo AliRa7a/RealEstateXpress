@@ -92,6 +92,7 @@ Route::controller(AmenitieController::class)->group(function () {
     Route::get('/all/amenities', 'allAmenities')->name('all.amenities');
     Route::get('/add/amenities', 'addAmenities')->name('add.amenities');
     Route::post('/store/amenities', 'storeAmenities')->name('store.amenities');
-    Route::get('/edit/{id}/amenities', 'editAmenities')->name('amenities.type');
+    Route::get('/edit/{id}/amenities', 'editAmenities')->name('edit.amenities');
+    Route::post('/update/amenities', 'updateAmenities')->name('update.amenities');
 
 });
