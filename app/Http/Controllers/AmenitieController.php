@@ -10,9 +10,6 @@ class AmenitieController extends Controller
     public function allAmenities()
     {
         $amenityTypes = Amenities::latest()->get();
-        foreach($amenityTypes as $amenityType){
-            $amenityType->amenities_name;
-        }
         return view('admin.amenities.all_type', compact('amenityTypes'));
     }
     public function addAmenities()
@@ -29,5 +26,11 @@ class AmenitieController extends Controller
         ]);
         toastr()->success('New Amenity is added successfully');
         return redirect()->route('all.type');
+    }
+
+    public function editAmenities($id)
+    {
+        $amenityTypes = Amenities::findOrFail($id);
+        return view('admin.amenities.edit_type', compact('amenityTypes'));
     }
 }
