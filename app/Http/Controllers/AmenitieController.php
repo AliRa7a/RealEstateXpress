@@ -33,4 +33,14 @@ class AmenitieController extends Controller
         $amenityTypes = Amenities::findOrFail($id);
         return view('admin.amenities.edit_type', compact('amenityTypes'));
     }
+
+    public function updateAmenities(Request $request)
+    {
+        $aid = $request->id;
+        Amenities::findOrFail($aid)->update([
+            'amenities_name' => $request->amenities_name,
+        ]);
+        toastr()->success('Amenity is updated successfully');
+        return redirect()->route('all.amenities');
+    }
 }
