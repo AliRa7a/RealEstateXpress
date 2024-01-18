@@ -25,7 +25,7 @@ class AmenitieController extends Controller
             'amenities_name' => $request->amenities_name,
         ]);
         toastr()->success('New Amenity is added successfully');
-        return redirect()->route('all.type');
+        return redirect()->route('all.amenities');
     }
 
     public function editAmenities($id)
@@ -42,5 +42,11 @@ class AmenitieController extends Controller
         ]);
         toastr()->success('Amenity is updated successfully');
         return redirect()->route('all.amenities');
+    }
+    public function deleteAmenities($id)
+    {
+        Amenities::findOrFail($id)->delete();
+        toastr()->success('Amenity deleted successfully', 'Congrats');
+        return redirect()->back();
     }
 }
