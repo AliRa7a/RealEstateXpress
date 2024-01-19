@@ -3,6 +3,7 @@
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\AgentController;
 use App\Http\Controllers\AmenitieController;
+use App\Http\Controllers\Backend\PropertyController;
 use App\Http\Controllers\Backend\propertyTypeController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\UserController;
@@ -87,7 +88,7 @@ Route::controller(propertyTypeController::class)->group(function () {
     Route::delete('/delete/{id}/type', 'deleteType')->name('delete.type');
 });
 
-// Property Type Route
+// Amenities Route
 Route::controller(AmenitieController::class)->group(function () {
     Route::get('/all/amenities', 'allAmenities')->name('all.amenities');
     Route::get('/add/amenities', 'addAmenities')->name('add.amenities');
@@ -95,4 +96,9 @@ Route::controller(AmenitieController::class)->group(function () {
     Route::get('/edit/{id}/amenities', 'editAmenities')->name('edit.amenities');
     Route::post('/update/amenities', 'updateAmenities')->name('update.amenities');
     Route::delete('/delete/{id}/amenities', 'deleteAmenities')->name('delete.amenities');
+});
+
+// Property Route
+Route::controller(PropertyController::class)->group(function () {
+    Route::get('/all/properties', 'allProperties')->name('all.properties');
 });
