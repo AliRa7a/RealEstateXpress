@@ -13,8 +13,8 @@ return new class extends Migration
     {
         Schema::create('properties', function (Blueprint $table) {
             $table->id();
-            $table->string('propertytype_id');
-            $table->string('amenities_id');
+            $table->integer('propertytype_id');
+            $table->integer('amenities_id');
             $table->string('property_name');
             $table->string('property_slug');
             $table->string('property_code');
@@ -22,7 +22,7 @@ return new class extends Migration
             $table->string('min_price')->nullable();
             $table->string('max_price')->nullable();
             $table->string('property_thumbnail');
-            $table->string('short_description')->nullable();
+            $table->text('short_description')->nullable();
             $table->text('long_description')->nullable();
             $table->string('bedrooms')->nullable();
             $table->string('bathrooms')->nullable();
