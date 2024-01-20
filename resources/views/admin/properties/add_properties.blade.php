@@ -137,17 +137,41 @@
                                         </div>
                                     </div><!-- Col -->
                                 </div><!-- Row -->
+
                                 <div class="row">
                                     <div class="col-sm-6">
                                         <div class="mb-3">
                                             <label class="form-label">Latitude</label>
                                             <input type="text" class="form-control" name="latitude">
+                                            <a href="https://www.latlong.net/convert-address-to-lat-long.html" target="_blank">Go here to get latitude of the address</a>
                                         </div>
                                     </div><!-- Col -->
                                     <div class="col-sm-6">
                                         <div class="mb-3">
                                             <label class="form-label">Longitude</label>
                                             <input type="text" class="form-control" name="longitude">
+                                            <a href="https://www.latlong.net/convert-address-to-lat-long.html" target="_blank">Go here to get longitude of the address</a>
+                                        </div>
+                                    </div><!-- Col -->
+                                </div><!-- Row -->
+
+                                <div class="row">
+                                    <div class="col-sm-4">
+                                        <div class="mb-3">
+                                            <label class="form-label">Property Tyoe</label>
+                                            <input type="text" class="form-control" name="">
+                                        </div>
+                                    </div><!-- Col -->
+                                    <div class="col-sm-4">
+                                        <div class="mb-3">
+                                            <label class="form-label">Property Amenities</label>
+                                            <input type="text" class="form-control" name="">
+                                        </div>
+                                    </div><!-- Col -->
+                                    <div class="col-sm-4">
+                                        <div class="mb-3">
+                                            <label class="form-label">Agent</label>
+                                            <input type="text" class="form-control" name="">
                                         </div>
                                     </div><!-- Col -->
                                 </div><!-- Row -->
