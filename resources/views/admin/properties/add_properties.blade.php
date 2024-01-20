@@ -5,7 +5,7 @@
 
 <div class="page-content">
     <div class="row profile-body">
-        <div class="col-md-4 col-xl-8 middle-wrapper">
+        <div class="col-md-4 col-xl-12 middle-wrapper">
             <div class="row">
                 <div class="col-md-12 grid-margin">
                     <div class="card">
@@ -61,22 +61,54 @@
                                     </div><!-- Col -->
                                 </div><!-- Row -->
                                 <div class="row">
-                                    <div class="col-sm-4">
+                                    <div class="col-sm-3">
+                                        <div class="mb-3">
+                                            <label class="form-label">Bedrooms</label>
+                                            <input type="text" class="form-control" name="bedrooms">
+                                        </div>
+                                    </div><!-- Col -->
+                                    <div class="col-sm-3">
+                                        <div class="mb-3">
+                                            <label class="form-label">Bathrooms</label>
+                                            <input type="text" class="form-control" name="bathrooms">
+                                        </div>
+                                    </div><!-- Col -->
+                                    <div class="col-sm-3">
+                                        <div class="mb-3">
+                                            <label class="form-label">Garage</label>
+                                            <input type="text" class="form-control" name="garage">
+                                        </div>
+                                    </div><!-- Col -->
+                                    <div class="col-sm-3">
+                                        <div class="mb-3">
+                                            <label class="form-label">Garage Size</label>
+                                            <input type="text" class="form-control" name="garage_size">
+                                        </div>
+                                    </div><!-- Col -->
+                                </div><!-- Row -->
+                                <div class="row">
+                                    <div class="col-sm-3">
+                                        <div class="mb-3">
+                                            <label class="form-label">Address</label>
+                                            <input type="text" class="form-control" name="address">
+                                        </div>
+                                    </div><!-- Col -->
+                                    <div class="col-sm-3">
                                         <div class="mb-3">
                                             <label class="form-label">City</label>
-                                            <input type="text" class="form-control" placeholder="Enter city">
+                                            <input type="text" class="form-control" name="city">
                                         </div>
                                     </div><!-- Col -->
-                                    <div class="col-sm-4">
+                                    <div class="col-sm-3">
                                         <div class="mb-3">
                                             <label class="form-label">State</label>
-                                            <input type="text" class="form-control" placeholder="Enter state">
+                                            <input type="text" class="form-control" name="state">
                                         </div>
                                     </div><!-- Col -->
-                                    <div class="col-sm-4">
+                                    <div class="col-sm-3">
                                         <div class="mb-3">
-                                            <label class="form-label">Zip</label>
-                                            <input type="text" class="form-control" placeholder="Enter zip code">
+                                            <label class="form-label">Postal Code</label>
+                                            <input type="text" class="form-control" name="postal_code">
                                         </div>
                                     </div><!-- Col -->
                                 </div><!-- Row -->
