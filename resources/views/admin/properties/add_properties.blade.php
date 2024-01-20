@@ -30,6 +30,7 @@
                                         </div>
                                     </div><!-- Col -->
                                 </div><!-- Row -->
+
                                 <div class="row">
                                     <div class="col-sm-6">
                                         <div class="mb-3">
@@ -44,6 +45,7 @@
                                         </div>
                                     </div><!-- Col -->
                                 </div><!-- Row -->
+
                                 <div class="row">
                                     <div class="col-sm-6">
                                         <div class="mb-3">
@@ -60,6 +62,7 @@
                                         </div>
                                     </div><!-- Col -->
                                 </div><!-- Row -->
+
                                 <div class="row">
                                     <div class="col-sm-3">
                                         <div class="mb-3">
@@ -86,6 +89,7 @@
                                         </div>
                                     </div><!-- Col -->
                                 </div><!-- Row -->
+
                                 <div class="row">
                                     <div class="col-sm-3">
                                         <div class="mb-3">
@@ -112,17 +116,38 @@
                                         </div>
                                     </div><!-- Col -->
                                 </div><!-- Row -->
+
+                                <div class="row">
+                                    <div class="col-sm-4">
+                                        <div class="mb-3">
+                                            <label class="form-label">Property Size</label>
+                                            <input type="text" class="form-control" name="property_size">
+                                        </div>
+                                    </div><!-- Col -->
+                                    <div class="col-sm-4">
+                                        <div class="mb-3">
+                                            <label class="form-label">Property Video</label>
+                                            <input type="text" class="form-control" name="property_video">
+                                        </div>
+                                    </div><!-- Col -->
+                                    <div class="col-sm-4">
+                                        <div class="mb-3">
+                                            <label class="form-label">Neighborhood</label>
+                                            <input type="text" class="form-control" name="neighborhood">
+                                        </div>
+                                    </div><!-- Col -->
+                                </div><!-- Row -->
                                 <div class="row">
                                     <div class="col-sm-6">
                                         <div class="mb-3">
-                                            <label class="form-label">Email address</label>
-                                            <input type="email" class="form-control" placeholder="Enter email">
+                                            <label class="form-label">Latitude</label>
+                                            <input type="text" class="form-control" name="latitude">
                                         </div>
                                     </div><!-- Col -->
                                     <div class="col-sm-6">
                                         <div class="mb-3">
-                                            <label class="form-label">Password</label>
-                                            <input type="password" class="form-control" autocomplete="off" placeholder="Password">
+                                            <label class="form-label">Longitude</label>
+                                            <input type="text" class="form-control" name="longitude">
                                         </div>
                                     </div><!-- Col -->
                                 </div><!-- Row -->
