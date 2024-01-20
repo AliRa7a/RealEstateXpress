@@ -55,7 +55,8 @@
                                     <div class="col-sm-6">
                                         <div class="mb-3">
                                             <label class="form-label">Additional Images</label>
-                                            <input type="file" name="max_price" class="form-control">
+                                            <input type="file" id="multiImg" multiple="" name="multi_img[]" class="form-control" onchange="multiImgUrl(this)">
+                                            <div class="row" id="preview_image"></div>
                                         </div>
                                     </div><!-- Col -->
                                 </div><!-- Row -->
@@ -116,6 +117,30 @@
             };
 
             reader.readAsDataURL(input.files[0]);
+        }
+    }
+
+    function multiImgUrl(input) {
+        var previewContainer = document.getElementById('preview_image');
+
+        previewContainer.innerHTML = '';
+
+        if (input.files && input.files.length > 0) {
+            for (var i = 0; i < input.files.length; i++) {
+                var reader = new FileReader();
+                var imgElement = document.createElement('img');
+
+                reader.onload = (function(img) {
+                    return function(e) {
+                        img.src = e.target.result;
+                        img.style.width = '100px';
+                        img.style.height = '100px';
+                    };
+                })(imgElement);
+
+                reader.readAsDataURL(input.files[i]);
+                previewContainer.appendChild(imgElement);
+            }
         }
     }
 </script>
