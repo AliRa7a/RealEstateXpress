@@ -65,7 +65,7 @@
                             <a href="{{route('all.properties')}}" class="nav-link">All Properties</a>
                         </li>
                         <li class="nav-item">
-                            <a href="" class="nav-link">Add Property</a>
+                            <a href="{{route('add.properties')}}" class="nav-link">Add Properties</a>
                         </li>
                     </ul>
                 </div>
