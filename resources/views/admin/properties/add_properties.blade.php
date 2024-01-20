@@ -48,7 +48,8 @@
                                     <div class="col-sm-6">
                                         <div class="mb-3">
                                             <label class="form-label">Main Image</label>
-                                            <input type="file" name="min_price" class="form-control">
+                                            <input type="file" name="property_thumbnail" class="form-control" onchange="mainThumbUrl(this)">
+                                            <img src="" id="mainThumb">
                                         </div>
                                     </div><!-- Col -->
                                     <div class="col-sm-6">
@@ -101,5 +102,22 @@
         </div>
     </div>
 </div>
+<script>
+    function mainThumbUrl(input) {
+        var mainThumb = document.getElementById('mainThumb');
+
+        if (input.files && input.files[0]) {
+            var reader = new FileReader();
+
+            reader.onload = function(e) {
+                mainThumb.src = e.target.result;
+                mainThumb.style.width = '100px';
+                mainThumb.style.height = '100px';
+            };
+
+            reader.readAsDataURL(input.files[0]);
+        }
+    }
+</script>
 
 @endsection
