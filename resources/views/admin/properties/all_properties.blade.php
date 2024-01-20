@@ -3,7 +3,7 @@
 <div class="page-content">
 
     <nav class="page-breadcrumb">
-        <a href="" type="button" class="btn btn-inverse-info">Add Properties</a>
+        <a href="{{route('add.properties')}}" type="button" class="btn btn-inverse-info">Add Properties</a>
     </nav>
 
     <div class="row">
