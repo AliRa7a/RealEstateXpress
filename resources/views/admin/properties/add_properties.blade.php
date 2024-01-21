@@ -158,8 +158,13 @@
                                 <div class="row">
                                     <div class="col-sm-4">
                                         <div class="mb-3">
-                                            <label class="form-label">Property Tyoe</label>
-                                            <input type="text" class="form-control" name="">
+                                            <label class="form-label">Property Type</label>
+                                            <select class="form-select" name="propertytype_id" id="property_type">
+                                                <option selected disabled>Select Property Type</option>
+                                                @foreach($propertyType as $propertyType)
+                                                <option value="{{$propertyType->id}}">{{$propertyType->type_name}}</option>
+                                                @endforeach
+                                            </select>
                                         </div>
                                     </div><!-- Col -->
                                     <div class="col-sm-4">
