@@ -170,14 +170,18 @@
                                     <div class="col-sm-4">
                                         <div class="mb-3">
                                             <label class="form-label">Property Amenities</label>
-                                            <input type="text" class="form-control" name="">
+                                            <select class="js-example-basic-multiple form-select" name="amenities_id[]" multiple="multiple" data-width="100%">
+                                                @foreach($amenities as $amenity)
+                                                <option value="{{$amenity->id}}">{{$amenity->amenities_name}}</option>
+                                                @endforeach
+                                            </select>
                                         </div>
                                     </div><!-- Col -->
                                     <div class="col-sm-4">
                                         <div class="mb-3">
                                             <label class="form-label">Agent</label>
                                             <select class="form-select" name="agent_id" id="agent_id">
-                                                <option selected disabled>Select Property Type</option>
+                                                <option selected disabled>Select Agent</option>
                                                 @foreach($activeAgents as $agent)
                                                 <option value="{{$agent->id}}">{{$agent->name}}</option>
                                                 @endforeach
