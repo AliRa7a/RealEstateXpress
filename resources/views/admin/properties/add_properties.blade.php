@@ -159,9 +159,9 @@
                                     <div class="col-sm-4">
                                         <div class="mb-3">
                                             <label class="form-label">Property Type</label>
-                                            <select class="form-select" name="propertytype_id" id="property_type">
+                                            <select class="form-select" name="propertytype_id" id="propertytype_id">
                                                 <option selected disabled>Select Property Type</option>
-                                                @foreach($propertyType as $propertyType)
+                                                @foreach($propertyTypes as $propertyType)
                                                 <option value="{{$propertyType->id}}">{{$propertyType->type_name}}</option>
                                                 @endforeach
                                             </select>
@@ -176,7 +176,12 @@
                                     <div class="col-sm-4">
                                         <div class="mb-3">
                                             <label class="form-label">Agent</label>
-                                            <input type="text" class="form-control" name="">
+                                            <select class="form-select" name="agent_id" id="agent_id">
+                                                <option selected disabled>Select Property Type</option>
+                                                @foreach($activeAgents as $agent)
+                                                <option value="{{$agent->id}}">{{$agent->name}}</option>
+                                                @endforeach
+                                            </select>
                                         </div>
                                     </div><!-- Col -->
                                 </div><!-- Row -->
