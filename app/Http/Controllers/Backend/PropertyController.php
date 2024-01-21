@@ -22,9 +22,9 @@ class PropertyController extends Controller
 
     public function addProperties()
     {
-        $propertyType = PropertyType::latest()->get();
+        $propertyTypes = PropertyType::latest()->get();
         $amenities = Amenities::latest()->get();
-        $activeAgent = User::where('status', 'active')->where('role', 'agent')->latest()->get();
-        return view('admin.properties.add_properties', compact('propertyType', 'amenities', 'activeAgent'));
+        $activeAgents = User::where('status', 'active')->where('role', 'agent')->latest()->get();
+        return view('admin.properties.add_properties', compact('propertyTypes', 'amenities', 'activeAgents'));
     }
 }
