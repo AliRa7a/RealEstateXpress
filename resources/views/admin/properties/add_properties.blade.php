@@ -11,7 +11,8 @@
                     <div class="card">
                         <div class="card-body">
                             <h6 class="card-title">Add Properties</h6>
-                            <form>
+                            <form method="post" id="addPropertyForm" enctype="multipart/form-data">
+                                @csrf
                                 <div class="row">
                                     <div class="col-sm-6">
                                         <div class="mb-3">
