@@ -9,10 +9,10 @@ use App\Models\MultiImage;
 use App\Models\Property;
 use App\Models\PropertyType;
 use App\Models\User;
+use Carbon\Carbon;
 use Haruncpi\LaravelIdGenerator\IdGenerator;
 use Illuminate\Http\Request;
 use Intervention\Image\Facades\Image;
-
 
 class PropertyController extends Controller
 {
@@ -39,7 +39,7 @@ class PropertyController extends Controller
         $image = $request->file('property_thumbnail');
         $name_gen = hexdec(uniqid()) . '.' . $image->getClientOriginalExtension();
         Image::make($image)->resize(370, 250)->save('upload/property/thumbnail/' . $name_gen);
-        $save_url = 'upload/property/thumbnail/' . $name_gen;
+        $property_thumbnail = 'upload/property/thumbnail/' . $name_gen;
 
         $property_id = Property::insertGetId([
             'propertytype_id' => $request->propertytype_id,
@@ -54,18 +54,25 @@ class PropertyController extends Controller
             'short_description' => $request->short_description,
             'long_description' => $request->long_description,
 
-            'propertytype_id' => $request->propertytype_id,
-            'propertytype_id' => $request->propertytype_id,
-            'propertytype_id' => $request->propertytype_id,
-            'propertytype_id' => $request->propertytype_id,
-            'propertytype_id' => $request->propertytype_id,
+            'garage' => $request->garage,
+            'garage_size' => $request->garage_size,
+            'property_size' => $request->property_size,
+            'property_video' => $request->property_video,
+            'address' => $request->address,
+            'city' => $request->city,
 
-            'propertytype_id' => $request->propertytype_id,
-            'propertytype_id' => $request->propertytype_id,
-            'propertytype_id' => $request->propertytype_id,
-            'propertytype_id' => $request->propertytype_id,
-            'propertytype_id' => $request->propertytype_id,
-            'propertytype_id' => $request->propertytype_id,
+            'state' => $request->state,
+            'postal_code' => $request->postal_code,
+            'neighborhood' => $request->neighborhood,
+            'latitude' => $request->latitude,
+            'longitude' => $request->longitude,
+            'featured' => $request->featured,
+
+            'hot' => $request->hot,
+            'agent_id' => $request->agent_id,
+            'status' => 1,
+            'property_thumbnail' => $property_thumbnail,
+            'created_at' => Carbon::now(),
 
         ]);
     }
