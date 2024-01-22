@@ -105,6 +105,10 @@
     <script src="{{asset('backend/assets/js/tags-input.js')}}"></script>
     <!-- End For Multiselect input field -->
 
+    <!-- TinyMice Text Area -->
+    <script src="{{asset('backend/assets/vendors/tinymce/tinymce.min.js')}}"></script>
+    <script src="{{asset('backend/assets/js/tinymce.js')}}"></script>
+    <!-- End TinyMice Text Area -->
 
     <!-- Script to delete Property Type -->
     <script>
