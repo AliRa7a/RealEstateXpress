@@ -11,7 +11,6 @@ use App\Models\PropertyType;
 use App\Models\User;
 use Illuminate\Http\Request;
 
-
 class PropertyController extends Controller
 {
     public function allProperties()
