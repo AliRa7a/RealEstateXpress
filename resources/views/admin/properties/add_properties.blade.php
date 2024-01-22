@@ -203,6 +203,21 @@
                                         <textarea class="form-control" name="tinymce" id="tinymceExample" rows="10"></textarea>
                                     </div>
                                 </div><!-- Col -->
+
+                                <div class="mb-3">
+                                    <div class="form-check form-check-inline">
+                                        <input name="featured" type="checkbox" value="1" class="form-check-input" id="featured_property">
+                                        <label class="form-check-label" for="featured_property">
+                                            Featured Property
+                                        </label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input name="hot" type="checkbox" value="1" class="form-check-input" id="hot_property">
+                                        <label class="form-check-label" for="hot_property">
+                                            Hot Property
+                                        </label>
+                                    </div>
+                                </div>
                             </form>
 
 
