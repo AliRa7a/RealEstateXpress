@@ -11,7 +11,7 @@
                     <div class="card">
                         <div class="card-body">
                             <h6 class="card-title">Add Properties</h6>
-                            <form method="post" id="addPropertyForm" enctype="multipart/form-data">
+                            <form method="post" id="addPropertyForm" enctype="multipart/form-data" action="{{route('store.properties')}}">
                                 @csrf
                                 <div class="row">
                                     <div class="col-sm-6">
@@ -253,7 +253,7 @@
                             </form>
 
 
-                            <button type="button" class="btn btn-primary submit">Submit form</button>
+                            <button type="button" class="btn btn-primary submit">Save Changes</button>
                         </div>
                     </div>
                 </div>
