@@ -189,7 +189,23 @@
                                         </div>
                                     </div><!-- Col -->
                                 </div><!-- Row -->
+
+                                <div class="col-sm-12">
+                                    <div class="mb-3">
+                                        <label class="form-label">Short Description</label>
+                                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="5"></textarea>
+                                    </div>
+                                </div><!-- Col -->
+
+                                <div class="col-sm-12">
+                                    <div class="mb-3">
+                                        <label class="form-label">Long Description</label>
+                                        <textarea class="form-control" name="tinymce" id="tinymceExample" rows="10"></textarea>
+                                    </div>
+                                </div><!-- Col -->
                             </form>
+
+
                             <button type="button" class="btn btn-primary submit">Submit form</button>
                         </div>
                     </div>
