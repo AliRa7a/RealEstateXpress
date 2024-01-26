@@ -89,5 +89,17 @@ class PropertyController extends Controller
                 'created_at' => Carbon::now(),
             ]);
         }
+
+        //Facilities Inert
+        $facilities = Count($request->facility_name);
+        if ($facilities != NULL) {
+            for ($i = 0; $i < $facilities; $i++) {
+                $fcount = new Facility();
+                $fcount->property_id = $property_id;
+                $fcount->facility_name = $request->facility_name[$i];
+                $fcount->distance = $request->distance[$i];
+                $fcount->save();
+            }
+        }
     }
 }
