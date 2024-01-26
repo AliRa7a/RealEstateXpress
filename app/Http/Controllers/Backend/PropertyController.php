@@ -101,5 +101,7 @@ class PropertyController extends Controller
                 $fcount->save();
             }
         }
+        toastr()->success('Amenity is updated successfully');
+        return redirect()->route('all.properties');
     }
 }
