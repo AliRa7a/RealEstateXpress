@@ -31,7 +31,7 @@
                                     <td> {{$key+1}}</td>
                                     <td><img src="{{asset($property->property_thumbnail)}}" style="width: 70px; height:40px;"></td>
                                     <td>{{$property->property_name}}</td>
-                                    <td>{{$property->propertytype_id}}</td>
+                                    <td>{{$property['propertyType']['type_name']}}</td>
                                     <td>{{$property->property_status}}</td>
                                     <td>{{$property->city}}</td>
                                     <td>
