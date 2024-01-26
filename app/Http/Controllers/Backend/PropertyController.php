@@ -75,5 +75,19 @@ class PropertyController extends Controller
             'created_at' => Carbon::now(),
 
         ]);
+
+        //Multiple Image Insert
+        $images = $request->file('multi_img');
+        foreach ($images as $img) {
+            $make_name = hexdec(uniqid()) . '.' . $img->getClientOriginalExtension();
+            Image::make($img)->resize(770, 520)->save('upload/property/multi-image/' . $make_name);
+            $multi_images = 'upload/property/multi-image/' . $make_name;
+
+            MultiImage::insert([
+                'property_id' => $property_id,
+                'photo_name' => $multi_images,
+                'created_at' => Carbon::now(),
+            ]);
+        }
     }
 }
