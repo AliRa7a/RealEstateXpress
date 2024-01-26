@@ -21,6 +21,7 @@
                                     <th>Property Type</th>
                                     <th>Property Status</th>
                                     <th>City</th>
+                                    <th>Code</th>
                                     <th>Status</th>
                                     <th>Action</th>
                                 </tr>
@@ -34,6 +35,7 @@
                                     <td>{{$property['propertyType']['type_name']}}</td>
                                     <td>{{$property->property_status}}</td>
                                     <td>{{$property->city}}</td>
+                                    <td>{{$property->property_code}}</td>
                                     <td>
                                         @if($property->status ==1)
                                         <span class="badge rounded-pill bg-success"> Active</span>
