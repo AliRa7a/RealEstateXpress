@@ -43,10 +43,10 @@ class PropertyController extends Controller
 
         $property_id = Property::insertGetId([
             'propertytype_id' => $request->propertytype_id,
-            'amenities_id' => $request->$amenities,
+            'amenities_id' => $amenities,
             'property_name' => $request->property_name,
             'property_slug' => strtolower(str_replace(' ', '-', $request->property_name)),
-            'propertytype_id' => $pcode,
+            'property_code' => $pcode,
 
             'property_status' => $request->property_status,
             'min_price' => $request->min_price,
@@ -71,9 +71,7 @@ class PropertyController extends Controller
             'hot' => $request->hot,
             'agent_id' => $request->agent_id,
             'status' => 1,
-            'property_thumbnail' => $property_thumbnail,
-            'created_at' => Carbon::now(),
-
+            'property_thumbnail' => $property_thumbnail
         ]);
 
         //Multiple Image Insert
@@ -86,7 +84,6 @@ class PropertyController extends Controller
             MultiImage::insert([
                 'property_id' => $property_id,
                 'photo_name' => $multi_images,
-                'created_at' => Carbon::now(),
             ]);
         }
 
