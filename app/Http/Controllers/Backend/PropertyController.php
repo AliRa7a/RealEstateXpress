@@ -101,4 +101,14 @@ class PropertyController extends Controller
         toastr()->success('Amenity is updated successfully');
         return redirect()->route('all.properties');
     }
+
+    public function editProperties($id)
+    {
+        $properties = Property::findOrFail($id);
+        $propertyTypes = PropertyType::latest()->get();
+        $amenities = Amenities::latest()->get();
+        $activeAgents = User::where('status', 'active')->where('role', 'agent')->latest()->get();
+
+        return view('admin.properties.edit_properties', compact('properties', 'propertyTypes', 'amenities', 'activeAgents'));
+    }
 }
