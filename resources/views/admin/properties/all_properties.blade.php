@@ -45,7 +45,7 @@
                                         @endif
                                     </td>
                                     <td>
-                                        <a href="" class="btn btn-outline-primary">Edit</a>
+                                        <a href="{{ route('edit.properties', $property->id) }}" class="btn btn-outline-primary">Edit</a>
                                         <button class="btn btn-outline-danger">Delete</button>
                                     </td>
                                 </tr>
