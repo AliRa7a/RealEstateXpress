@@ -192,13 +192,13 @@
 
                                 <div class="mb-3">
                                     <div class="form-check form-check-inline">
-                                        <input name="featured" type="checkbox" value="1" class="form-check-input" id="featured_property">
+                                        <input name="featured" type="checkbox" value="1" class="form-check-input" id="featured_property" {{ $properties->featured == 1 ? 'checked' : ''}}>
                                         <label class="form-check-label" for="featured_property">
                                             Featured Property
                                         </label>
                                     </div>
                                     <div class="form-check form-check-inline">
-                                        <input name="hot" type="checkbox" value="1" class="form-check-input" id="hot_property">
+                                        <input name="hot" type="checkbox" value="1" class="form-check-input" id="hot_property" {{ $properties->hot == 1 ? 'checked' : ''}}>
                                         <label class="form-check-label" for="hot_property">
                                             Hot Property
                                         </label>
