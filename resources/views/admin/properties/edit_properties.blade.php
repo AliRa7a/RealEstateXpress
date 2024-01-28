@@ -169,7 +169,7 @@
                                             <select class="form-select" name="agent_id" id="agent_id">
                                                 <option selected disabled>Select Agent</option>
                                                 @foreach($activeAgents as $agent)
-                                                <option value="{{$agent->id}}">{{$agent->name}}</option>
+                                                <option value="{{$agent->id}}" {{ $agent->id == $properties->agent_id ? 'selected' : ''}}>{{$agent->name}}</option>
                                                 @endforeach
                                             </select>
                                         </div>
