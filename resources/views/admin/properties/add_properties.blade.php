@@ -194,14 +194,14 @@
                                 <div class="col-sm-12">
                                     <div class="mb-3">
                                         <label class="form-label">Short Description</label>
-                                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="5"></textarea>
+                                        <textarea class="form-control" name="short_description" id="exampleFormControlTextarea1" rows="5"></textarea>
                                     </div>
                                 </div><!-- Col -->
 
                                 <div class="col-sm-12">
                                     <div class="mb-3">
                                         <label class="form-label">Long Description</label>
-                                        <textarea class="form-control" name="tinymce" id="tinymceExample" rows="10"></textarea>
+                                        <textarea class="form-control" name="long_description" id="tinymceExample" rows="10"></textarea>
                                     </div>
                                 </div><!-- Col -->
 
