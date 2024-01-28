@@ -17,7 +17,7 @@
                                     <div class="col-sm-6">
                                         <div class="mb-3">
                                             <label class="form-label">Property Name</label>
-                                            <input type="text" name="property_name" class="form-control">
+                                            <input type="text" name="property_name" class="form-control" value="{{$properties->property_name}}">
                                         </div>
                                     </div><!-- Col -->
                                     <div class="col-sm-6">
@@ -36,42 +36,42 @@
                                     <div class="col-sm-6">
                                         <div class="mb-3">
                                             <label class="form-label">Min Price</label>
-                                            <input type="text" name="min_price" class="form-control">
+                                            <input type="text" name="min_price" class="form-control" value="{{$properties->min_price}}">
                                         </div>
                                     </div><!-- Col -->
                                     <div class="col-sm-6">
                                         <div class="mb-3">
                                             <label class="form-label">Max Price</label>
-                                            <input type="text" name="max_price" class="form-control">
+                                            <input type="text" name="max_price" class="form-control" value="{{$properties->max_price}}">
                                         </div>
                                     </div><!-- Col -->
                                 </div><!-- Row -->
 
                                 <!-- Images Row -->
-                                
+
                                 <div class="row">
                                     <div class="col-sm-3">
                                         <div class="mb-3">
                                             <label class="form-label">Bedrooms</label>
-                                            <input type="text" class="form-control" name="bedrooms">
+                                            <input type="text" class="form-control" name="bedrooms" value="{{$properties->bedrooms}}">
                                         </div>
                                     </div><!-- Col -->
                                     <div class="col-sm-3">
                                         <div class="mb-3">
                                             <label class="form-label">Bathrooms</label>
-                                            <input type="text" class="form-control" name="bathrooms">
+                                            <input type="text" class="form-control" name="bathrooms" value="{{$properties->bathrooms}}">
                                         </div>
                                     </div><!-- Col -->
                                     <div class="col-sm-3">
                                         <div class="mb-3">
                                             <label class="form-label">Garage</label>
-                                            <input type="text" class="form-control" name="garage">
+                                            <input type="text" class="form-control" name="garage" value="{{$properties->garage}}">
                                         </div>
                                     </div><!-- Col -->
                                     <div class="col-sm-3">
                                         <div class="mb-3">
                                             <label class="form-label">Garage Size</label>
-                                            <input type="text" class="form-control" name="garage_size">
+                                            <input type="text" class="form-control" name="garage_size" value="{{$properties->garage_size}}">
                                         </div>
                                     </div><!-- Col -->
                                 </div><!-- Row -->
@@ -80,25 +80,25 @@
                                     <div class="col-sm-3">
                                         <div class="mb-3">
                                             <label class="form-label">Address</label>
-                                            <input type="text" class="form-control" name="address">
+                                            <input type="text" class="form-control" name="address" value="{{$properties->address}}">
                                         </div>
                                     </div><!-- Col -->
                                     <div class="col-sm-3">
                                         <div class="mb-3">
                                             <label class="form-label">City</label>
-                                            <input type="text" class="form-control" name="city">
+                                            <input type="text" class="form-control" name="city" value="{{$properties->city}}">
                                         </div>
                                     </div><!-- Col -->
                                     <div class="col-sm-3">
                                         <div class="mb-3">
                                             <label class="form-label">State</label>
-                                            <input type="text" class="form-control" name="state">
+                                            <input type="text" class="form-control" name="state" value="{{$properties->state}}">
                                         </div>
                                     </div><!-- Col -->
                                     <div class="col-sm-3">
                                         <div class="mb-3">
                                             <label class="form-label">Postal Code</label>
-                                            <input type="text" class="form-control" name="postal_code">
+                                            <input type="text" class="form-control" name="postal_code" value="{{$properties->postal_code}}">
                                         </div>
                                     </div><!-- Col -->
                                 </div><!-- Row -->
@@ -107,19 +107,19 @@
                                     <div class="col-sm-4">
                                         <div class="mb-3">
                                             <label class="form-label">Property Size</label>
-                                            <input type="text" class="form-control" name="property_size">
+                                            <input type="text" class="form-control" name="property_size" value="{{$properties->property_size}}">
                                         </div>
                                     </div><!-- Col -->
                                     <div class="col-sm-4">
                                         <div class="mb-3">
                                             <label class="form-label">Property Video</label>
-                                            <input type="text" class="form-control" name="property_video">
+                                            <input type="text" class="form-control" name="property_video" value="{{$properties->property_video}}">
                                         </div>
                                     </div><!-- Col -->
                                     <div class="col-sm-4">
                                         <div class="mb-3">
                                             <label class="form-label">Neighborhood</label>
-                                            <input type="text" class="form-control" name="neighborhood">
+                                            <input type="text" class="form-control" name="neighborhood" value="{{$properties->neighborhood}}">
                                         </div>
                                     </div><!-- Col -->
                                 </div><!-- Row -->
@@ -128,14 +128,14 @@
                                     <div class="col-sm-6">
                                         <div class="mb-3">
                                             <label class="form-label">Latitude</label>
-                                            <input type="text" class="form-control" name="latitude">
+                                            <input type="text" class="form-control" name="latitude" value="{{$properties->latitude}}">
                                             <a href="https://www.latlong.net/convert-address-to-lat-long.html" target="_blank">Go here to get latitude of the address</a>
                                         </div>
                                     </div><!-- Col -->
                                     <div class="col-sm-6">
                                         <div class="mb-3">
                                             <label class="form-label">Longitude</label>
-                                            <input type="text" class="form-control" name="longitude">
+                                            <input type="text" class="form-control" name="longitude" value="{{$properties->longitude}}">
                                             <a href="https://www.latlong.net/convert-address-to-lat-long.html" target="_blank">Go here to get longitude of the address</a>
                                         </div>
                                     </div><!-- Col -->
@@ -179,14 +179,14 @@
                                 <div class="col-sm-12">
                                     <div class="mb-3">
                                         <label class="form-label">Short Description</label>
-                                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="5"></textarea>
+                                        <textarea class="form-control" name="short_description" id="exampleFormControlTextarea1" rows="5">{{$properties->short_description}}</textarea>
                                     </div>
                                 </div><!-- Col -->
 
                                 <div class="col-sm-12">
                                     <div class="mb-3">
                                         <label class="form-label">Long Description</label>
-                                        <textarea class="form-control" name="tinymce" id="tinymceExample" rows="10"></textarea>
+                                        <textarea class="form-control" name="long_description" id="tinymceExample" rows="10">{{$properties->long_description}}</textarea>
                                     </div>
                                 </div><!-- Col -->
 
