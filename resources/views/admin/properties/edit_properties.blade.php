@@ -25,8 +25,8 @@
                                             <label for="property_status" class="form-label">Property Status</label>
                                             <select class="form-select" name="property_status" id="property_status">
                                                 <option selected disabled>Select Status</option>
-                                                <option value="rent">Rent</option>
-                                                <option value="buy">Buy</option>
+                                                <option value="rent" {{ $properties->property_status== 'rent' ? 'selected' : ''}}>Rent</option>
+                                                <option value="buy" {{ $properties->property_status== 'buy' ? 'selected' : ''}}>Buy</option>
                                             </select>
                                         </div>
                                     </div><!-- Col -->
