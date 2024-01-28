@@ -10,8 +10,8 @@
                 <div class="col-md-12 grid-margin">
                     <div class="card">
                         <div class="card-body">
-                            <h6 class="card-title">Add Properties</h6>
-                            <form method="post" id="addPropertyForm" enctype="multipart/form-data" action="{{route('store.properties')}}">
+                            <h6 class="card-title">Edit Properties</h6>
+                            <form method="post" id="editPropertyForm" enctype="multipart/form-data" action="{{route('store.properties')}}">
                                 @csrf
                                 <div class="row">
                                     <div class="col-sm-6">
@@ -47,23 +47,8 @@
                                     </div><!-- Col -->
                                 </div><!-- Row -->
 
-                                <div class="row">
-                                    <div class="col-sm-6">
-                                        <div class="mb-3">
-                                            <label class="form-label">Main Image</label>
-                                            <input type="file" name="property_thumbnail" class="form-control" onchange="mainThumbUrl(this)">
-                                            <img src="" id="mainThumb">
-                                        </div>
-                                    </div><!-- Col -->
-                                    <div class="col-sm-6">
-                                        <div class="mb-3">
-                                            <label class="form-label">Additional Images</label>
-                                            <input type="file" id="multiImg" multiple="" name="multi_img[]" class="form-control" onchange="multiImgUrl(this)">
-                                            <div class="row" id="preview_image"></div>
-                                        </div>
-                                    </div><!-- Col -->
-                                </div><!-- Row -->
-
+                                <!-- Images Row -->
+                                
                                 <div class="row">
                                     <div class="col-sm-3">
                                         <div class="mb-3">
