@@ -103,5 +103,5 @@ Route::controller(PropertyController::class)->group(function () {
     Route::get('/all/properties', 'allProperties')->name('all.properties');
     Route::get('/add/properties', 'addProperties')->name('add.properties');
     Route::post('/store/properties', 'storeProperties')->name('store.properties');
-
+    Route::get('/edit/{id}/properties', 'editProperties')->name('edit.properties');
 });
