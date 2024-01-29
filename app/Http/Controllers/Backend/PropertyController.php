@@ -119,6 +119,15 @@ class PropertyController extends Controller
         $amenities = implode(",", $amen);
 
         $property_id = $request->id;
+        if ($request->hasFile('property_thumbnail')) {
+            if (isset($property_thumbnail) && !empty($property_thumbnail)) {
+                unlink(public_path($property_thumbnail));
+            }
+            $image = $request->file('property_thumbnail');
+            $name_gen = hexdec(uniqid()) . '.' . $image->getClientOriginalExtension();
+            Image::make($image)->resize(370, 250)->save('upload/property/thumbnail/' . $name_gen);
+            $property_thumbnail = 'upload/property/thumbnail/' . $name_gen;
+        }
         Property::findOrFail($property_id)->update([
             'propertytype_id' => $request->propertytype_id,
             'amenities_id' => $amenities,
@@ -147,6 +156,8 @@ class PropertyController extends Controller
 
             'hot' => $request->hot,
             'agent_id' => $request->agent_id,
+            'property_thumbnail' => $property_thumbnail,
+
         ]);
         toastr()->success('Property is updated successfully');
         return redirect()->route('all.properties');
