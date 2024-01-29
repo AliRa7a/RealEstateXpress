@@ -56,6 +56,22 @@
                                             <img src="{{asset($properties->property_thumbnail)}}" id="mainThumb" style="width: 100px; height: 100px;">
                                         </div>
                                     </div>
+                                    <div class="col-sm-6">
+                                        <div class="mb-3">
+                                            <label class="form-label">Additional Images</label>
+                                            <input type="file" id="multiImg" multiple="" name="multi_img[]" class="form-control" onchange="multiImgUrl(this)">
+                                            <div class="row" id="preview_image">
+                                                @if(isset($multi_images) && count($multi_images) > 0)
+                                                @foreach($multi_images as $image)
+                                                <div class="col-md-3">
+                                                    <img src="{{ asset($image->photo_name) }}" class="img-fluid" alt="Image">
+                                                </div>
+                                                @endforeach
+                                                @endif
+                                            </div>
+                                        </div>
+                                    </div>
+
                                 </div><!-- Row -->
                                 <div class="row">
                                     <div class="col-sm-3">
