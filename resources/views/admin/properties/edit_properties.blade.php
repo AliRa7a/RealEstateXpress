@@ -48,8 +48,15 @@
                                     </div><!-- Col -->
                                 </div><!-- Row -->
 
-                                <!-- Images Row -->
-
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <div class="mb-3">
+                                            <label class="form-label">Main Image</label>
+                                            <input type="file" name="property_thumbnail" class="form-control" onchange="mainThumbUrl(this)">
+                                            <img src="{{asset($properties->property_thumbnail)}}" id="mainThumb" style="width: 100px; height: 100px;">
+                                        </div>
+                                    </div>
+                                </div><!-- Row -->
                                 <div class="row">
                                     <div class="col-sm-3">
                                         <div class="mb-3">
