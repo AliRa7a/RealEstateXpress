@@ -98,7 +98,7 @@ class PropertyController extends Controller
                 $fcount->save();
             }
         }
-        toastr()->success('Amenity is updated successfully');
+        toastr()->success('Property is added successfully');
         return redirect()->route('all.properties');
     }
 
@@ -112,5 +112,43 @@ class PropertyController extends Controller
         $activeAgents = User::where('status', 'active')->where('role', 'agent')->latest()->get();
 
         return view('admin.properties.edit_properties', compact('properties', 'propertyTypes', 'amenities', 'propertyAmenities', 'activeAgents'));
+    }
+    public function updateProperties(Request $request)
+    {
+        $amen = $request->amenities_id;
+        $amenities = implode(",", $amen);
+
+        $property_id = $request->id;
+        Property::findOrFail($property_id)->update([
+            'propertytype_id' => $request->propertytype_id,
+            'amenities_id' => $amenities,
+            'property_name' => $request->property_name,
+            'property_slug' => strtolower(str_replace(' ', '-', $request->property_name)),
+
+            'property_status' => $request->property_status,
+            'min_price' => $request->min_price,
+            'max_price' => $request->max_price,
+            'short_description' => $request->short_description,
+            'long_description' => $request->long_description,
+
+            'garage' => $request->garage,
+            'garage_size' => $request->garage_size,
+            'property_size' => $request->property_size,
+            'property_video' => $request->property_video,
+            'address' => $request->address,
+            'city' => $request->city,
+
+            'state' => $request->state,
+            'postal_code' => $request->postal_code,
+            'neighborhood' => $request->neighborhood,
+            'latitude' => $request->latitude,
+            'longitude' => $request->longitude,
+            'featured' => $request->featured,
+
+            'hot' => $request->hot,
+            'agent_id' => $request->agent_id,
+        ]);
+        toastr()->success('Property is updated successfully');
+        return redirect()->route('all.properties');
     }
 }
