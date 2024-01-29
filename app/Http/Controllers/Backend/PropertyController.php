@@ -129,6 +129,26 @@ class PropertyController extends Controller
             Image::make($image)->resize(370, 250)->save('upload/property/thumbnail/' . $name_gen);
             $property_thumbnail = 'upload/property/thumbnail/' . $name_gen;
         }
+        $existingImages = MultiImage::where('property_id', $property_id)->get();
+
+        foreach ($existingImages as $existingImage) {
+            unlink(public_path($existingImage->photo_name));
+            $existingImage->delete();
+        }
+
+        if ($request->hasFile('multi_img')) {
+            $images = $request->file('multi_img');
+            foreach ($images as $img) {
+                $make_name = hexdec(uniqid()) . '.' . $img->getClientOriginalExtension();
+                Image::make($img)->resize(770, 520)->save('upload/property/multi-image/' . $make_name);
+                $multi_images = 'upload/property/multi-image/' . $make_name;
+
+                MultiImage::insert([
+                    'property_id' => $property_id,
+                    'photo_name' => $multi_images,
+                ]);
+            }
+        }
         Property::findOrFail($property_id)->update([
             'propertytype_id' => $request->propertytype_id,
             'amenities_id' => $amenities,
